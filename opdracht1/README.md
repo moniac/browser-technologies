@@ -32,4 +32,10 @@ Criteria
 - Zet je code op Github
 - Schrijf een Readme met een beschrijving van de problemen die je hebt gevonden, hoe je die hebt opgelost, of hoe je dit zou oplossen (met todo’s) als je genoeg tijd en budget zou hebben 
 
+ ### Opdracht 1.2 - Fork je OBA
  
+ ### Verbeteringen
+ 
+ * Ik heb nu ervoor gezorgd dat de afbeeldingen die ingeladen worden een alt tag krijgen met de naam van de juiste Pokémon.
+ * Er is een fallback font
+ * Er wordt nu een standaard font gebruikt en als de google font klaar is met downloaden wordt de font geswapped
