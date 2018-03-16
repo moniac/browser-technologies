@@ -56,6 +56,8 @@ Criteria
  
  * Op veel oudere devices werkte mijn website niet, dit komt omdat ik de Promises en de Fetch api niet gepolyfilled heb. Dit heb ik nu wel gedaan.
  
+ * IE 11 vind het niet leuk als je een forEach() gebruikt op HTML elementen, dus ik heb Array.from() gebruikt, maar dit bestaat niet in IE! Dus ik heb dat ook moeten polyfillen. Nu werkt het!
+ 
  ## Kleur
  ![alt text](http://i.imgur.com/aMmDATw.jpg "Logo Title Text 1")
  
