@@ -47,9 +47,11 @@ Criteria
  
  ## Javascript
  
+ * Ik had eerst met script type module gewerkt, maar niet alle browsers supporten dat, dus nu ben ik met Webpack bezig
  * Alles wordt nu met webpack gebundled, dus vanzelf wordt alle javascript geminified.
  
  ## Kleur
+ ![alt text](http://i.imgur.com/aMmDATw.jpg "Logo Title Text 1")
  
  ## Breedband internet
  
@@ -57,8 +59,8 @@ Criteria
  
  ## Local Storage
  
+ * Ik ben bezig geweest met het opslaan van de API data in de localstorage, maar het is mij nog niet gelukt om te kunnen checken of de data al opgeslagen is om dan een API call te vermijden. Dit moet ik verder onderzoeken.
+ 
  ## Muis/Trackpad
  
- * Ik heb nu ervoor gezorgd dat de afbeeldingen die ingeladen worden een alt tag krijgen met de naam van de juiste Pokémon.
- * Er is een fallback font
- * Er wordt nu een standaard font gebruikt en als de google font klaar is met downloaden wordt de font geswapped
+ * Alle links zijn door te tabben. Dit was vanaf het begin al ok.
