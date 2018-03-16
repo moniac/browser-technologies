@@ -1,4 +1,4 @@
-URL: https://moniac.github.io/wafs/app/public/index.html
+URL: goo.gl/Jy6FuT
 
 # Browser Technologies
 //Robuuste, toegankelijke websites leren bouwen … 
