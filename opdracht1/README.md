@@ -23,6 +23,7 @@ Criteria
  
  * Afbeeldingen worden dynamisch ingeladen, dus hier heb ik niet iets op kunnen besparen.
  
+ * Wel heb ik de alt tag dynamisch kunnen invullen met de naam van de Pokémon
   ![alt text](https://i.imgur.com/YtxrPWl.jpg "Logo Title Text 1")
  
  ## Custom fonts
