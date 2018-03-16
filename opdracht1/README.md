@@ -59,6 +59,22 @@ Criteria
  
  * Ik zou kunnen kijken of je bij een lagere internet snelheid niet alle pokemon download maar bijvoorbeeld slechts de eerste 20.
  
+ ```
+ try {
+			const response = await fetch(api)
+			const data = await response.json()
+
+			if (data) {
+				return data
+			}
+			throw new Error()
+
+		} catch (error) {
+			throw new Error(`Unable to get data back from ${api}`)
+		}
+ ```
+ ^ Een betere error afhandeling dat aangeeft waar iets mis is gegaan.
+ 
  ## Cookies
  
  ## Local Storage
