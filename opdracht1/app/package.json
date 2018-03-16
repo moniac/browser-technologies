@@ -17,6 +17,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.7",
+    "materialize-css": "^0.100.2",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
     "sass-loader": "^6.0.6",
@@ -27,7 +28,6 @@
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "fontfaceobserver": "^2.0.13"
+    "babel-plugin-transform-runtime": "^6.23.0"
   }
 }
