@@ -40,6 +40,8 @@ Criteria
  
  * Afbeeldingen worden dynamisch ingeladen, dus hier heb ik niet iets op kunnen besparen.
  
+  ![alt text](https://i.imgur.com/YtxrPWl.jpg "Logo Title Text 1")
+ 
  ## Custom fonts
  
  * Fonts worden met font-display: swap; omgewisseld, zodat er altijd tekst zichtbaar is.
@@ -54,6 +56,8 @@ Criteria
  ![alt text](http://i.imgur.com/aMmDATw.jpg "Logo Title Text 1")
  
  ## Breedband internet
+ 
+ * Ik zou kunnen kijken of je bij een lagere internet snelheid niet alle pokemon download maar bijvoorbeeld slechts de eerste 20.
  
  ## Cookies
  
