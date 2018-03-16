@@ -67,7 +67,7 @@ const paths = {
 							},
 							alt() {
 								// still providing a dynamic alt
-								return `A sprite image of the pokemon ${this.name}`
+								return `A sprite image of the Pokémon ${this.name}`
 							}
 					}
 				}
