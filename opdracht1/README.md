@@ -1,3 +1,5 @@
+URL: https://moniac.github.io/wafs/app/public/index.html
+
 # Browser Technologies
 //Robuuste, toegankelijke websites leren bouwen … 
 
@@ -40,6 +42,8 @@ Criteria
  
  * Afbeeldingen worden dynamisch ingeladen, dus hier heb ik niet iets op kunnen besparen.
  
+  ![alt text](https://i.imgur.com/YtxrPWl.jpg "Logo Title Text 1")
+ 
  ## Custom fonts
  
  * Fonts worden met font-display: swap; omgewisseld, zodat er altijd tekst zichtbaar is.
@@ -47,18 +51,38 @@ Criteria
  
  ## Javascript
  
+ * Ik had eerst met script type module gewerkt, maar niet alle browsers supporten dat, dus nu ben ik met Webpack bezig
  * Alles wordt nu met webpack gebundled, dus vanzelf wordt alle javascript geminified.
  
  ## Kleur
+ ![alt text](http://i.imgur.com/aMmDATw.jpg "Logo Title Text 1")
  
  ## Breedband internet
+ 
+ * Ik zou kunnen kijken of je bij een lagere internet snelheid niet alle pokemon download maar bijvoorbeeld slechts de eerste 20.
+ 
+ ```
+ try {
+			const response = await fetch(api)
+			const data = await response.json()
+
+			if (data) {
+				return data
+			}
+			throw new Error()
+
+		} catch (error) {
+			throw new Error(`Unable to get data back from ${api}`)
+		}
+ ```
+ ^ Een betere error afhandeling dat aangeeft waar iets mis is gegaan.
  
  ## Cookies
  
  ## Local Storage
  
+ * Ik ben bezig geweest met het opslaan van de API data in de localstorage, maar het is mij nog niet gelukt om te kunnen checken of de data al opgeslagen is om dan een API call te vermijden. Dit moet ik verder onderzoeken.
+ 
  ## Muis/Trackpad
  
- * Ik heb nu ervoor gezorgd dat de afbeeldingen die ingeladen worden een alt tag krijgen met de naam van de juiste Pokémon.
- * Er is een fallback font
- * Er wordt nu een standaard font gebruikt en als de google font klaar is met downloaden wordt de font geswapped
+ * Alle links zijn door te tabben. Dit was vanaf het begin al ok.
