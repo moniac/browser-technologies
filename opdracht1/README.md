@@ -1,4 +1,4 @@
-URL: goo.gl/Jy6FuT
+URL: https://goo.gl/LrVa6n
 
 # Browser Technologies
 //Robuuste, toegankelijke websites leren bouwen … 
