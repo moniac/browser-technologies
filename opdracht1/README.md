@@ -36,6 +36,29 @@ Criteria
  
  ### Verbeteringen
  
+ ## Afbeeldingen
+ 
+ * Afbeeldingen worden dynamisch ingeladen, dus hier heb ik niet iets op kunnen besparen.
+ 
+ ## Custom fonts
+ 
+ * Fonts worden met font-display: swap; omgewisseld, zodat er altijd tekst zichtbaar is.
+ * Ik speel nog met de FontFaceObserver, wat werkt maar bij mij eigenlijk meer tijd toevoegd ipv bespaart.
+ 
+ ## Javascript
+ 
+ * Alles wordt nu met webpack gebundled, dus vanzelf wordt alle javascript geminified.
+ 
+ ## Kleur
+ 
+ ## Breedband internet
+ 
+ ## Cookies
+ 
+ ## Local Storage
+ 
+ ## Muis/Trackpad
+ 
  * Ik heb nu ervoor gezorgd dat de afbeeldingen die ingeladen worden een alt tag krijgen met de naam van de juiste Pokémon.
  * Er is een fallback font
  * Er wordt nu een standaard font gebruikt en als de google font klaar is met downloaden wordt de font geswapped
