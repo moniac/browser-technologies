@@ -1,5 +1,5 @@
 const settings = {
-	sections: document.querySelectorAll('section')
+	sections: Array.from(document.querySelectorAll('section'))
 }
 
 export default settings
