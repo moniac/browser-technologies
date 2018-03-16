@@ -54,6 +54,8 @@ Criteria
  * Ik had eerst met script type module gewerkt, maar niet alle browsers supporten dat, dus nu ben ik met Webpack bezig
  * Alles wordt nu met webpack gebundled, dus vanzelf wordt alle javascript geminified.
  
+ * Op veel oudere devices werkte mijn website niet, dit komt omdat ik de Promises en de Fetch api niet gepolyfilled heb. Dit heb ik nu wel gedaan.
+ 
  ## Kleur
  ![alt text](http://i.imgur.com/aMmDATw.jpg "Logo Title Text 1")
  
