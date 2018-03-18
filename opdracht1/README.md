@@ -23,6 +23,7 @@ Criteria
  
  * Afbeeldingen worden dynamisch ingeladen, dus hier heb ik niet iets op kunnen besparen.
  
+ ### Getest in het lab
  * Wel heb ik de alt tag dynamisch kunnen invullen met de naam van de Pokémon
   ![alt text](https://i.imgur.com/YtxrPWl.jpg "Logo Title Text 1")
  
@@ -64,6 +65,20 @@ Criteria
  ^ Een betere error afhandeling dat aangeeft waar iets mis is gegaan.
  
  ## Cookies
+ 
+ De site heeft geen cookies nodig om normaal te functioneren, dus dit is niet van toepassing.
+ 
+ ## Testen met een screenreader
+  ![alt text](http://i.imgur.com/ntmXgUd.jpg "Logo Title Text 1")
+  
+Met VoiceOver op de Mac heb ik een screenreader kunnen simuleren, de website is volledig door te tabben en de screenreader kon ook alles wat belangrijk was voorlezen. Het lijkt mij nog interessant om te onderzoeken hoe je ervoor kan zorgen dat de screenreader een afbeelding kan beschrijven aan de gebruiker.
+  
+ ## Testen in het lab
+ 
+ ![alt text](http://i.imgur.com/90HuaZf.jpg "Logo Title Text 1")
+ 
+ In het lab heb ik de website kunnen testen om te zien of het wel goed werkt. Hier ben ik er achtergekomen dat Internet Explorer het niet leuk vindt als je een forEach gebruikt op een lijstje met HTML elementen. De bug was te fixen met een polyfill, maar ik denk dat ik de volgende keer een betere oplossing moet zoeken.
+ 
  
  ## Local Storage
  
