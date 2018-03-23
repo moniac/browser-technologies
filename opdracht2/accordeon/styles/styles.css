@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+nav:first-of-type details {
+	background: gray;
+}
+
+nav:first-of-type details ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav:first-of-type details ul li {
+	width: 100%;
+}
+
+li {
+	list-style: none;
+	background: red;
+}
+
+nav:first-of-type img {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
+	background: white;
+	display: inline-block;
+}
+
+aside {
+	display: inline-block;
+}
+
+aside h1, p {
+	margin: 0.5rem 0;
+}

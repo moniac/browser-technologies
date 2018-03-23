@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Opdracht 2</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		nav:first-of-type details {
+			background: gray;
+		}
+
+		nav:first-of-type details ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		nav:first-of-type details ul li {
+			width: 100%;
+		}
+
+		li {
+			list-style: none;
+			transition: all 20s ease-out;
+		}
+
+		nav:first-of-type img {
+			height: 3rem;
+			width: 3rem;
+			border-radius: 50%;
+			background: white;
+			display: inline-block;
+		}
+
+		section aside img {
+			border: 10px solid black;
+		}
+
+		aside {
+			display: inline-block;
+		}
+
+		aside h1,
+		p {
+			margin: 0.5rem 0;
+		}
+		
+		figure {
+		border: 10px solid black;
+		}
+
+	</style>
+</head>
+
+<body>
+	<section>
+		<figure>
+			<aside>
+				<img src="" alt="" style="display:none" width='200' id="image">
+			</aside>
+		</figure>
+		<input type="file" name="" accept="image/*">
+	</section>
+
+	<script>
+		function showImage() {
+			if (this.files && this.files[0]) {
+				var obj = new FileReader()
+				obj.onload = function (data) {
+					var image = document.getElementById('image')
+					image.src = data.target.result
+					console.log(image.width)
+					image.style.display = 'block'
+				}
+				obj.readAsDataURL(this.files[0])
+			}
+		}
+
+		var input = document.querySelector('input')
+
+		input.addEventListener('change', showImage)
+	</script>
+</body>
+
+</html>
