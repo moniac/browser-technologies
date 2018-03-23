@@ -1,6 +1,12 @@
 # Browser Technologies
 //Robuuste, toegankelijke websites leren bouwen …
 
+Accordeon
+https://moniac.github.io/browser-technologies/opdracht2/accordeon/index.html
+
+Image Picker
+https://moniac.github.io/browser-technologies/opdracht2/imagepicker/index.html
+
 ## Opdracht 2 - 1, 2, 3 Feature Detectie
 //Wat laat je zien als een browser of gebruiker 'enhancement' niet kan tonen of zien? Hoe doe je Feature Detection en wat doe je als een techniek niet werkt?
 
