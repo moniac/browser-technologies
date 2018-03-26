@@ -18,3 +18,8 @@ Beoordelingscriteria
   - de leesbaarheidsregels zijn toegepast, contrast en kleuren kloppen
   - het heeft een gebruiksvriendelijke interface, met gebruikmaking van affordance en feedback op de interactieve elementen
 - Student kan uitleggen wat Progressive Enhancement en Feature Detectie is en hoe dit toe te passen in Web Development
+
+## Core functionality
+
+* Het kunnen weergeven van de uitslag van een wedstrijd.
+
