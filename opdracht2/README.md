@@ -38,3 +38,14 @@ Het bespaart veel werk omdat je niet met javascript een menu hoeft uit te laten 
 Chrome | Internet Explorer | Firefox | Safari | Opera
 ---------|----------|--------- | ------- | -----
  ✅ |  🚫  |  ✅ |  ✅  | 🚫
+
+## Image Picker
+
+Hiermee kan iemand een afbeelding uploaden en krijgen ze de afbeelding als preview te zien.
+
+## Browser support
+
+
+Chrome | Internet Explorer | Firefox | Safari | Opera
+---------|----------|--------- | ------- | -----
+ ✅ |  🚫  |  ✅ |  ✅  | 🚫
