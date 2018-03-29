@@ -12,61 +12,36 @@
 			padding: 0;
 		}
 
-		nav:first-of-type details {
-			background: gray;
-		}
-
-		nav:first-of-type details ul {
-			margin: 0;
-			padding: 0;
-		}
-
-		nav:first-of-type details ul li {
+		#image {
 			width: 100%;
 		}
 
-		li {
-			list-style: none;
-			transition: all 20s ease-out;
+		.image-upload {
+			text-align: center;
 		}
 
-		nav:first-of-type img {
-			height: 3rem;
-			width: 3rem;
-			border-radius: 50%;
-			background: white;
-			display: inline-block;
+		.image-upload>input {
+			display: none;
 		}
 
-		section aside img {
-			border: 10px solid black;
+		.image-upload img {
+			margin: 0 auto;
+			width: 80px;
+			cursor: pointer;
 		}
-
-		aside {
-			display: inline-block;
-		}
-
-		aside h1,
-		p {
-			margin: 0.5rem 0;
-		}
-		
-		figure {
-		border: 10px solid black;
-		}
-
 	</style>
 </head>
 
 <body>
-	<section>
-		<figure>
-			<aside>
-				<img src="" alt="" style="display:none" width='200' id="image">
-			</aside>
-		</figure>
-		<input type="file" name="" accept="image/*">
-	</section>
+	<div class="image-upload">
+		<p>Upload your image here</p>
+		<label for="upload">
+			<img src="http://goo.gl/pB9rpQ" />
+		</label>
+		<img src="" alt="" id="image">
+
+		<input type="file" name="" accept="image/*" id="upload">
+	</div>
 
 	<script>
 		function showImage() {

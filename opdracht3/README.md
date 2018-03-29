@@ -51,4 +51,6 @@ Zodra je browser iets moderner wordt, kan er met CSS en Javascript een modal in 
 
 Notifications!
 
+Het is geen geheim dat dit enorm slecht ondersteund is momenteel. Maar dat maakt het niet minder gaaf. 
+
 ![Notification support on IE 11](https://i.imgur.com/MFvvV9k.jpg)

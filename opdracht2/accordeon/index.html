@@ -8,94 +8,67 @@
 	<title>Opdracht 2</title>
 	<style>
 		body {
-			margin: 0;
-			padding: 0;
+			font-family: 'Courier New', Courier, monospace;
 		}
 
-		nav:first-of-type details {
-			background: gray;
+
+		details {
+			margin: 1rem;
 		}
 
-		nav:first-of-type details ul {
-			margin: 0;
-			padding: 0;
+		summary {
+			font-weight: bold;
 		}
 
-		nav:first-of-type details ul li {
-			width: 100%;
-		}
-
-		li {
-			list-style: none;
-			transition: all 20s ease-out;
-		}
-
-		aside {
-			display: inline-block;
-		}
-
-		aside h1,
-		p {
-			margin: 0.5rem 0;
-		}
-		
-		figure {
-		border: 10px solid black;
-		}
-
+		/* details>summary::-webkit-details-marker {
+			display: none;
+		} */
 	</style>
 </head>
 
 <body>
-	<nav>
-		<details>
-			<ul>
-				<li>
-					<section>
-						<img src="" alt="">
-						<aside>
-							<h1>
-								Naam Leraar
-							</h1>
-							<p>Meer informatie over de leraar</p>
-						</aside>
-					</section>
-				</li>
-				<li>
-					<section>
-						<img src="" alt="">
-						<aside>
-							<h1>
-								Naam Leraar
-							</h1>
-							<p>Meer informatie over de leraar</p>
-						</aside>
-					</section>
-				</li>
-				<li>
-					<section>
-						<img src="" alt="">
-						<aside>
-							<h1>
-								Naam Leraar
-							</h1>
-							<p>Meer informatie over de leraar</p>
-						</aside>
-					</section>
-				</li>
-			</ul>
-		</details>
-	</nav>
+	<details>
+
+		<summary>
+			<aside>
+				<h1>
+					Naam Leraar
+				</h1>
+				<p>Meer informatie over de leraar</p>
+			</aside>
+		</summary>
+
+
+		<summary>
+			<aside>
+				<h1>
+					Naam Leraar
+				</h1>
+				<p>Meer informatie over de leraar</p>
+			</aside>
+		</summary>
+
+
+		<summary>
+			<aside>
+				<h1>
+					Naam Leraar
+				</h1>
+				<p>Meer informatie over de leraar</p>
+			</aside>
+		</summary>
+
+	</details>
 
 	<script>
-	(function() {
-	const details = document.querySelector('details')
+		(function () {
+			const details = document.querySelector('details')
 
-	details.addEventListener('click', function() {
-		console.log(this)
-	})
+			details.addEventListener('click', function () {
+				console.log(this)
+			})
 
-  })()
+		})()
 	</script>
 </body>
 

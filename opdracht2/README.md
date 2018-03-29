@@ -23,3 +23,18 @@ Beoordelingscriteria
   - Bronnen van uitleg en gebruikte artikelen.
   -	Welke browsers/devices ondersteunen deze wel/niet.
   -	Een beschrijving hoe de fallback werkt.
+
+## Accordeon
+
+Voor dit element heb ik gebruik gemaakt van het ```details``` en ```summary``` element.
+
+Dit is een relatief nieuwe feature die een accordeon nabootst. Het heeft een fijne [fallback](https://css-tricks.com/quick-reminder-that-details-summary-is-the-easiest-way-ever-to-make-an-accordion/) in de zin van dat als je geen ondersteuning ervoor hebt het element standaard al uitgeklapt is.
+
+Het bespaart veel werk omdat je niet met javascript een menu hoeft uit te laten klappen.
+
+## Browser support
+
+
+Chrome | Internet Explorer | Firefox | Safari | Opera
+---------|----------|--------- | ------- | -----
+ ✅ |  🚫  |  ✅ |  ✅  | 🚫

@@ -46,7 +46,7 @@ if ("setTimeout" in window) {
 		if (teamA > teamB) {
 			showModal()
 		}
-	}, 3000)
+	}, 4000)
 }
 
 function showModal() {
