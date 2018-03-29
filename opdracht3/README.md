@@ -3,23 +3,19 @@
 
 https://3.mohammedmulazada.nl/
 
-## Opdracht 3 - Progressive Enhanced Browser Technologies
-//Browser Technologies onderzoeken en implementeren als enhancement. Basic functionaliteit van een use case doorgronden.
+## Progressive Enhancement
 
-Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien/horen/voelen krijgen. Bouw je demo in 3 lagen, volgens het principe van Progressive Enhancement. Gebruik als enhanced feature een (hippe, innovatieve, vooruitstrevende) Browser Technologie die je gaat onderzoeken op functionaliteit, toegankelijkheid en (browser) ondersteuning.
+Het doel van progressive enhancement is om vanuit een solide basis steeds meer 'nice' stuff toe te voegen.
 
-Beoordelingscriteria
-- De code staat in een repository op GitHub
-- Er is een Readme toegevoegd met daarin beschreven:
-  - een beschrijving van de core functionality
-  - een beschrijving van de feature(s)/Browser Technologies
-  - welke browser de feature(s) wel/niet ondersteunen
-  - een beschrijving van de accessibility issues die zijn onderzocht
-- De demo is opgebouwd in 3 lagen, volgens het principe van Progressive Enhancement
-- De user experience van de demo is goed
-  - de leesbaarheidsregels zijn toegepast, contrast en kleuren kloppen
-  - het heeft een gebruiksvriendelijke interface, met gebruikmaking van affordance en feedback op de interactieve elementen
-- Student kan uitleggen wat Progressive Enhancement en Feature Detectie is en hoe dit toe te passen in Web Development
+Het is dus belangrijk dat een website altijd kan werken zonder de fancy stuff.
+
+## Kleur
+
+Voor dit project heb ik super lelijke kleuren gebruikt, alhoewel ik dat jammer vind is het toch wel fijn dat dit nu voor de meeste mensen goed zichtbaar is.
+
+De tool heb ik gedownload sinds ik het in een presentatie van Ischa Gast zag.
+
+![Color Accesibility](https://i.imgur.com/bTOSjzY.png)
 
 ## Core functionality
 
@@ -51,6 +47,6 @@ Zodra je browser iets moderner wordt, kan er met CSS en Javascript een modal in 
 
 Notifications!
 
-Het is geen geheim dat dit enorm slecht ondersteund is momenteel. Maar dat maakt het niet minder gaaf. 
+Het is geen geheim dat dit [enorm slecht ondersteund](https://developer.mozilla.org/en-US/docs/Web/API/notification) is momenteel. Maar dat maakt het niet minder gaaf. 
 
 ![Notification support on IE 11](https://i.imgur.com/MFvvV9k.jpg)
