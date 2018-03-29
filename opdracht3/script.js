@@ -7,6 +7,7 @@ var modalClose = document.querySelector('section p')
 
 var resultaatBox = document.createElement('p')
 
+
 resultaatBox.textContent = 'Je favoriete team heeft gewonnen met een score van: ' + teamA
 main.insertBefore(resultaatBox, firstAside)
 
@@ -19,7 +20,7 @@ function hideModal() {
 	modal.className = ''
 }
 
-showModal()
+
 
 modalClose.addEventListener('click', hideModal)
 
@@ -32,5 +33,9 @@ console.log(teamB)
 // 			alert('Woooo, je favoriete team heeft gewonnen met een score van: ' + teamA)
 // 		}
 // 	}, 3000);
+// }
+
+// if ("setTimeout" in window) {
+// 	showModal()
 // }
 

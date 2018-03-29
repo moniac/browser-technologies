@@ -6,8 +6,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Opdracht 3</title>
 	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'open sans';
+			text-align: center;
+		}
 		aside {
 			display: inline-block;
+		}
+
+		h1 {
+			padding: 1rem 0;
 		}
 
 		section {
@@ -17,14 +27,17 @@
 			position: fixed;
 			width: 18.75rem;
 			width: 300px;
-			height: 6.25rem;
-			height: 100px;
+			padding: 2rem;
 			display: none;
 			top: 50%;
 			left: 50%;
 			margin-top: -100px;
 			margin-left: -150px;
 			visibility: hidden;
+		}
+
+		section h2 {
+			font-size: 1.5rem;
 		}
 
 		section p:first-of-type {
@@ -36,15 +49,48 @@
 			visibility: visible;
 		}
 
+		.notification {
+			cursor: pointer;
+			padding: 2rem;
+			color: white;
+			background: red;
+			width: 20rem;
+			margin: 2rem auto;
+		}
+
+		main {
+			background: green;
+			text-align: center;
+			padding: 2rem;
+			color: white;
+		}
+
+		nav {
+			padding: 0;
+			background: red;
+			color: white;
+		}
+
+		nav p {
+			padding: 1rem;
+		}
+
 	</style>
 </head>
 <body>
+	<nav>
+		<p>Week 3</p>
+	</nav>
 	<h1>Opdracht 3</h1>
 	<section>
 		<p>x</p>
 		<h1>Resultaat</h1>
+		<h2></h2>
 	</section>
 	<main>
+	<noscript>
+		<p>Je favoriete team heeft gewonnen met een score van: 2</p>
+	</noscript>
 		<aside>
 			<h1>Team A</h1>
 			<input type="number" value="2">
