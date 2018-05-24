@@ -1,7 +1,7 @@
+## Opdracht 3
+
 # Browser Technologies
 //Robuuste, toegankelijke websites leren bouwen …
-
-https://3.mohammedmulazada.nl/
 
 ## Progressive Enhancement
 
@@ -31,22 +31,23 @@ Zoals je kunt zien valt de ondersteuning voor de notification API nog best tegen
 
 Het is dus belangrijk dat de Notificatie vrijblijvend is en niet de core functionality van je website.
 
-## Lagen
 
-### De baseline
+## Core functionality
 
-Mocht je geen Javascript hebben, dan zie je de score op de website staan.
+De gebruiker moet op een simpele manier een notificatie kunnen zien van het resultaat.
 
-Mocht je een oudere browser hebben die nog wel Javascript ondersteunt, dan krijg je een alert die de score weergeeft.
+De simpelste opzet is puur HTML, waarbij slechts het resultaat weergeven wordt.
 
-### Acceptable
+## Enhanced
 
-Zodra je browser iets moderner wordt, kan er met CSS en Javascript een modal in beeld komen. De model ziet er wat netter uit dan een alert box.
+Momenteel bouwt de website zich in 3 stappen op, beginnend bij puur HTML.
 
-### Pleasurable
+Stap 1: Check of de nieuwe Notification API beschikbaar is voor de browser. Is die aanwezig? Mooi, dan gebruiken we die. 
 
-Notifications!
+Is die er, maar heeft iemand gekozen om dit te blokkeren? Laat dan stap 2 zien
 
-Het is geen geheim dat dit [enorm slecht ondersteund](https://developer.mozilla.org/en-US/docs/Web/API/notification) is momenteel. Maar dat maakt het niet minder gaaf. 
+Stap 2: Geen Notification? No problem, we doen het met een simpele classList toggle, waarbij een HTML element weergeven en verbborgen wordt.
 
-![Notification support on IE 11](https://i.imgur.com/MFvvV9k.jpg)
+Stap 3: Geen Notification en geen querySelector? Dan doen we een simpele alert()
+
+## Device Lab

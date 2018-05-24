@@ -67,3 +67,22 @@ Hiermee kan iemand een afbeelding uploaden en krijgen ze de afbeelding als previ
 Chrome | Internet Explorer | Firefox | Safari | Opera
 ---------|----------|--------- | ------- | -----
  ✅ |  🚫  |  ✅ |  🚫  | ✅ 
+
+ ## Fallback
+
+Hier kijk ik of de browser de FileReader API ondersteund, mocht ie dat doen dan enhance ik de input.
+
+ ```js
+ if (window.FileReader)
+ ```
+
+ ## Device lab
+
+ <details>
+
+![Older mobile browsers](./images/IMG_2367.JPG)
+![Older mobile browsers](./images/IMG_8620.JPG)
+![Older mobile browsers](./images/IMG_8331.JPG)
+![Older mobile browsers](./images/IMG_7946.JPG)
+
+</details>
