@@ -4,7 +4,7 @@ Feedback tabel
 Wat | Hoe |
 ---------| --------
  Bewijs van testen Device Lab | Er is nu een foto hiervan... 
- Testen met screenreader | Ook hiervan is een foto toegevoegd
+ Testen met screenreader | Ook hiervan is een foto toegevoegd |
 
 ### Opdracht 1.2 - Fork je OBA
 Hoe zit het eigenlijk met Progressive Enhancement van je OBA opdracht? Waarschijnlijk kan daar wel het één en ander aan verbeterd worden, dat ding is immers in een week in elkaar gehackt!

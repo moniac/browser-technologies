@@ -18,12 +18,21 @@ Het bespaart veel werk omdat je niet met javascript een menu hoeft uit te laten 
 
 ## Browser support
 
-
 Chrome | Internet Explorer | Firefox | Safari | Opera
 ---------|----------|--------- | ------- | -----
  ✅ |  🚫  |  ✅ |  ✅  | 🚫
 
- -----------------
+ --------------------
+
+ ## Fallback Support
+
+ Hiermee check ik of de browser het detail element correct ondersteund. Daarnaast check ik ook of de querySelectorAll en de classList correct ondersteund worden, om zo de functionaliteit toe te voegen mocht het details element niet ondersteund worden.
+
+ ```js
+if (!("open" in document.createElement("details")) 
+&& document.querySelectorAll && document.createElement("_").classList)
+```
+
 
 ## Image Picker
 

@@ -1,74 +1,113 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Opdracht 2</title>
+	<title>Accordion</title>
+
 	<style>
-		body {
-			font-family: 'Courier New', Courier, monospace;
+		*,
+		*:before,
+		*:after {
+			margin: 0;
+			padding: 0;
+			outline: 0;
 		}
 
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			display: table;
+			height: 100vh;
+			width: 100vw;
+		}
 
-		details {
-			margin: 1rem;
+		ol {
+			list-style: none;
+			margin: 0 auto;
+			max-width: 45rem;
+			width: 100%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		li {
+			border: 1px solid #222;
 		}
 
 		summary {
-			font-weight: bold;
+			display: block;
+			cursor: pointer;
+			padding: 0.5rem;
+			transition: background-color 0.2s ease-in-out;
 		}
 
-		/* details>summary::-webkit-details-marker {
+		summary:focus,
+		summary:hover {
+			background-color: #ddd;
+		}
+
+		p {
+			background-color: #fff;
+			padding: 0.5rem;
+		}
+
+		.visible {
+			display: block;
+		}
+
+		.hide {
 			display: none;
-		} */
+		}
 	</style>
 </head>
 
 <body>
-	<details>
-
-		<summary>
-			<aside>
-				<h1>
-					Naam Leraar
-				</h1>
-				<p>Meer informatie over de leraar</p>
-			</aside>
-		</summary>
-
-
-		<summary>
-			<aside>
-				<h1>
-					Naam Leraar
-				</h1>
-				<p>Meer informatie over de leraar</p>
-			</aside>
-		</summary>
-
-
-		<summary>
-			<aside>
-				<h1>
-					Naam Leraar
-				</h1>
-				<p>Meer informatie over de leraar</p>
-			</aside>
-		</summary>
-
-	</details>
+	<ol>
+		<li>
+			<details>
+				<summary class="title">Leraar 1</summary>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed molestie nisi. Sed mattis pellentesque neque, ac ullamcorper
+					dolor viverra eget. Mauris aliquam tortor leo, ut congue erat consequat sit amet. Sed ipsum magna, congue id justo eget,
+					fringilla faucibus risus. Curabitur sodales consequat libero quis porttitor. Phasellus eu metus posuere, euismod ex
+					at, iaculis turpis. Pellentesque dictum ut purus quis condimentum. Cras nisi enim, interdum in eleifend sit amet, elementum
+					et urna. Proin commodo ligula felis, in rutrum tellus malesuada id. Nunc suscipit sagittis odio, vitae efficitur nibh
+					feugiat eu. Proin imperdiet vitae dui et lobortis. Donec lobortis tempor volutpat.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary class="title">Leraar 2</summary>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed molestie nisi. Sed mattis pellentesque neque, ac ullamcorper
+					dolor viverra eget. Mauris aliquam tortor leo, ut congue erat consequat sit amet. Sed ipsum magna, congue id justo eget,
+					fringilla faucibus risus. Curabitur sodales consequat libero quis porttitor. Phasellus eu metus posuere, euismod ex
+					at, iaculis turpis. Pellentesque dictum ut purus quis condimentum. Cras nisi enim, interdum in eleifend sit amet, elementum
+					et urna. Proin commodo ligula felis, in rutrum tellus malesuada id. Nunc suscipit sagittis odio, vitae efficitur nibh
+					feugiat eu. Proin imperdiet vitae dui et lobortis. Donec lobortis tempor volutpat.</p>
+			</details>
+		</li>
+		<li>
+			<details>
+				<summary class="title">Leraar 3</summary>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed molestie nisi. Sed mattis pellentesque neque, ac ullamcorper
+					dolor viverra eget. Mauris aliquam tortor leo, ut congue erat consequat sit amet. Sed ipsum magna, congue id justo eget,
+					fringilla faucibus risus. Curabitur sodales consequat libero quis porttitor. Phasellus eu metus posuere, euismod ex
+					at, iaculis turpis. Pellentesque dictum ut purus quis condimentum. Cras nisi enim, interdum in eleifend sit amet, elementum
+					et urna. Proin commodo ligula felis, in rutrum tellus malesuada id. Nunc suscipit sagittis odio, vitae efficitur nibh
+					feugiat eu. Proin imperdiet vitae dui et lobortis. Donec lobortis tempor volutpat.</p>
+			</details>
+		</li>
+	</ol>
 
 	<script>
-		(function () {
-			const details = document.querySelector('details')
-
-			details.addEventListener('click', function () {
-				console.log(this)
-			})
-
-		})()
+		if (!("open" in document.createElement("details")) && document.querySelectorAll && document.createElement("_").classList)
+			for (var accordionTitle = document.querySelectorAll(".title"), j = 0; j < accordionTitle.length; j++)
+				accordionTitle[j].parentNode.childNodes[3].classList.add("hide"), accordionTitle[j].addEventListener("click",
+					function () {
+						console.log(this.parentNode.childNodes)
+						this.parentNode.childNodes[3].classList.toggle("hide")
+					});
 	</script>
 </body>
 
