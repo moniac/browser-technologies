@@ -20,7 +20,7 @@
 			text-align: center;
 		}
 
-		.image-upload>input {
+		.enhanced .image-upload input {
 			display: none;
 		}
 
@@ -36,15 +36,22 @@
 	<div class="image-upload">
 		<p>Upload your image here</p>
 		<label for="upload">
-			<img src="http://goo.gl/pB9rpQ" />
+			<input type="file" name=" " accept="image/* " id="upload ">
 		</label>
-		<img src="" alt="" id="image">
-
-		<input type="file" name="" accept="image/*" id="upload">
 	</div>
 
 	<script>
+		if (window.FileReader) {
+			document.body.classList.add('enhanced')
+			var input = document.querySelector('input')
+			var img = document.createElement('img')
+			img.src = 'http://goo.gl/pB9rpQ'
+			input.insertAdjacentElement('beforeBegin', img)
+			input.addEventListener('change', showImage)
+		}
+
 		function showImage() {
+
 			if (this.files && this.files[0]) {
 				var obj = new FileReader()
 				obj.onload = function (data) {
@@ -55,11 +62,9 @@
 				}
 				obj.readAsDataURL(this.files[0])
 			}
+
+
 		}
-
-		var input = document.querySelector('input')
-
-		input.addEventListener('change', showImage)
 	</script>
 </body>
 
