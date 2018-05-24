@@ -102,10 +102,9 @@
 
 	<script>
 		if (!("open" in document.createElement("details")) && document.querySelectorAll && document.createElement("_").classList)
-			for (var accordionTitle = document.querySelectorAll(".title"), j = 0; j < accordionTitle.length; j++)
-				accordionTitle[j].parentNode.childNodes[3].classList.add("hide"), accordionTitle[j].addEventListener("click",
+			for (var accordionTitle = document.querySelectorAll(".title"), i = 0; i < accordionTitle.length; i++)
+				accordionTitle[i].parentNode.childNodes[3].classList.add("hide"), accordionTitle[i].addEventListener("click",
 					function () {
-						console.log(this.parentNode.childNodes)
 						this.parentNode.childNodes[3].classList.toggle("hide")
 					});
 	</script>
