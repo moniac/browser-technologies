@@ -12,7 +12,7 @@
 			padding: 0;
 		}
 
-		#image {
+		img {
 			width: 100%;
 		}
 
@@ -26,7 +26,7 @@
 
 		.image-upload img {
 			margin: 0 auto;
-			width: 80px;
+			width: 160px;
 			cursor: pointer;
 		}
 	</style>
@@ -35,8 +35,8 @@
 <body>
 	<div class="image-upload">
 		<p>Upload your image here</p>
-		<label for="upload">
-			<input type="file" name=" " accept="image/* " id="upload ">
+		<label>
+			<input type="file" name=" " accept="image/*">
 		</label>
 	</div>
 
@@ -45,6 +45,8 @@
 			document.body.classList.add('enhanced')
 			var input = document.querySelector('input')
 			var img = document.createElement('img')
+			var placeholder = document.createElement('img')
+			document.querySelector('.image-upload').insertAdjacentElement('afterEnd', placeholder)
 			img.src = 'http://goo.gl/pB9rpQ'
 			input.insertAdjacentElement('beforeBegin', img)
 			input.addEventListener('change', showImage)
@@ -55,10 +57,8 @@
 			if (this.files && this.files[0]) {
 				var obj = new FileReader()
 				obj.onload = function (data) {
-					var image = document.getElementById('image')
-					image.src = data.target.result
-					console.log(image.width)
-					image.style.display = 'block'
+					placeholder.src = data.target.result
+					placeholder.style.display = 'block'
 				}
 				obj.readAsDataURL(this.files[0])
 			}
