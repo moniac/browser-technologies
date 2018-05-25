@@ -156,6 +156,7 @@
 		header {
 			background: red;
 			padding: 1rem;
+			color: white;
 		}
 
 		header nav h1,
@@ -167,7 +168,6 @@
 		header nav a {
 			float: right;
 			cursor: pointer;
-			color: white;
 		}
 
 		header nav a:focus,
@@ -218,6 +218,8 @@
 			display: block;
 			margin: 2rem auto;
 			width: 8rem;
+			cursor: pointer;
+			color: white;
 		}
 	</style>
 </head>
@@ -248,13 +250,15 @@
 	</main>
 
 	<script>
-		var teamA = document.querySelector('main > aside:first-of-type > p').innerHTML
-		var teamB = document.querySelector('main > aside:nth-of-type(2) > p').innerHTML
+		if ('querySelector' in document) {
+			var teamA = document.querySelector('main > aside:first-of-type > p').innerHTML
+			var teamB = document.querySelector('main > aside:nth-of-type(2) > p').innerHTML
 
-		if (teamA > teamB) {
-			var matchResult = 'Team A wint met een score van: ' + teamA + ':' + teamB
-		} else {
-			var matchResult = 'Team B wint met een score van: ' + teamB + ':' + teamA
+			if (teamA > teamB) {
+				var matchResult = 'Team A wint met een score van: ' + teamA + ':' + teamB
+			} else {
+				var matchResult = 'Team B wint met een score van: ' + teamB + ':' + teamA
+			}
 		}
 
 		if ('Notification' in window && Notification.permission == 'denied') {

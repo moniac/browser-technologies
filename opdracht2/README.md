@@ -80,6 +80,18 @@ Hier kijk ik of de browser de FileReader API ondersteund, mocht ie dat doen dan 
 
  Uiteindelijk is de hoofd enhancement dat de geuploade image even gepreviewed wordt in het scherm.
 
+ Basis
+
+ Hier is het slechts een input element, er gebeurt niks fancy.
+
+ ![Older mobile browsers](./images/withoutjs.png)
+
+ Enhanced
+
+ Hier wordt de label van de input een afbeelding waarop geklikt kan worden, daarnaast krijgt de gebruiker een preview te zien van de afbeelding
+
+ ![Older mobile browsers](./images/withjs.png)
+
  ## Device lab
 
  <details>
