@@ -1,5 +1,13 @@
 ## Opdracht 3
 
+[Website hier](https://moniac.github.io/browser-technologies/opdracht3/index.html)
+
+Feedback | Done |
+---------|----------
+ push.min.js weghalen (vanilla way) | ✅ 
+ Geen notificaties tegelijk doen | ✅
+ User flow verwerken | ✅
+
 # Browser Technologies
 //Robuuste, toegankelijke websites leren bouwen …
 
@@ -23,6 +31,8 @@ De tool heb ik gedownload sinds ik het in een presentatie van Ischa Gast zag.
 
 * De meeste interessante gebruikte technologie hier zijn de push notificaties.
 
+* De simpelste opzet is puur HTML, waarbij slechts het resultaat weergeven wordt.
+
 ## Ondersteuning
 
 ![Support for notification api](http://i.imgur.com/CeD0zut.jpg)
@@ -30,13 +40,6 @@ De tool heb ik gedownload sinds ik het in een presentatie van Ischa Gast zag.
 Zoals je kunt zien valt de ondersteuning voor de notification API nog best tegen. Niet alle browsers ondersteunen het momenteel maar zijn er wel mee bezig.
 
 Het is dus belangrijk dat de Notificatie vrijblijvend is en niet de core functionality van je website.
-
-
-## Core functionality
-
-De gebruiker moet op een simpele manier een notificatie kunnen zien van het resultaat.
-
-De simpelste opzet is puur HTML, waarbij slechts het resultaat weergeven wordt.
 
 ## Enhanced
 
@@ -56,7 +59,7 @@ else if ('Notification' in window)
 
 Check of de nieuwe Notification API beschikbaar is voor de browser. Is die aanwezig? Mooi, dan gebruiken we die. 
 
-Is die er, maar heeft iemand gekozen om dit te blokkeren? Laat dan stap 2 zien.
+Is die er, maar heeft iemand gekozen om dit te blokkeren? Het is namelijk goed mogelijk dat Notificaties compleet gefaald zijn en dat mensen het standaard zullen blokkeren. Als ik dit niet doe dan zullen die mensen alleen een button zien die dus niks doet. Laat dan stap 2 zien.
 
 Stap 2:
 

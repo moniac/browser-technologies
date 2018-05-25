@@ -1,12 +1,10 @@
 # Browser Technologies
-//Robuuste, toegankelijke websites leren bouwen …
 
 Accordeon
 https://moniac.github.io/browser-technologies/opdracht2/accordeon/index.html
 
 Image Picker
 https://moniac.github.io/browser-technologies/opdracht2/imagepicker/index.html
-
 
 ## Accordeon
 
@@ -80,7 +78,7 @@ Hier kijk ik of de browser de FileReader API ondersteund, mocht ie dat doen dan 
  if (window.FileReader)
  ```
 
- Uiteindelijk is de hoofd enhancement dat de geupload image even gepreviewed wordt in het scherm.
+ Uiteindelijk is de hoofd enhancement dat de geuploade image even gepreviewed wordt in het scherm.
 
  ## Device lab
 
