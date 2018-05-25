@@ -40,14 +40,66 @@ De simpelste opzet is puur HTML, waarbij slechts het resultaat weergeven wordt.
 
 ## Enhanced
 
+---
+
 Momenteel bouwt de website zich in 3 stappen op, beginnend bij puur HTML.
 
-Stap 1: Check of de nieuwe Notification API beschikbaar is voor de browser. Is die aanwezig? Mooi, dan gebruiken we die. 
+Stap 1: 
 
-Is die er, maar heeft iemand gekozen om dit te blokkeren? Laat dan stap 2 zien
+```js
+if ('Notification' in window && Notification.permission == 'denied')
+```
 
-Stap 2: Geen Notification? No problem, we doen het met een simpele classList toggle, waarbij een HTML element weergeven en verbborgen wordt.
+```js
+else if ('Notification' in window)
+```
 
-Stap 3: Geen Notification en geen querySelector? Dan doen we een simpele alert()
+Check of de nieuwe Notification API beschikbaar is voor de browser. Is die aanwezig? Mooi, dan gebruiken we die. 
+
+Is die er, maar heeft iemand gekozen om dit te blokkeren? Laat dan stap 2 zien.
+
+Stap 2:
+
+```js
+else if ("querySelector" in document)
+```
+
+Geen Notification? No problem, we doen het met een simpele classList toggle, waarbij een HTML element weergeven en verborgen wordt.
+
+Stap 3:
+
+```js
+else if ("alert" in window)
+```
+
+Geen Notification en geen querySelector? Dan doen we een simpele alert()
+
+---
 
 ## Device Lab
+
+<details>
+
+Notifications supported
+
+Microsoft Surface
+![Older mobile browsers](./images/IMG_0070.JPG)
+Microsoft Surface - 2
+![Older mobile browsers](./images/IMG_9595.JPG)
+Microsoft Surface - 3
+![Older mobile browsers](./images/IMG_9402.JPG)
+
+Samsung
+![Older mobile browsers](./images/IMG_4880.JPG)
+![Older mobile browsers](./images/IMG_7383.JPG)
+![Older mobile browsers](./images/IMG_3321.JPG)
+
+Geen Notification support
+
+![Older mobile browsers](./images/IMG_0629.JPG)
+![Older mobile browsers](./images/IMG_2609.JPG)
+
+
+
+
+</details>

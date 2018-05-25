@@ -68,6 +68,10 @@ Chrome | Internet Explorer | Firefox | Safari | Opera
 ---------|----------|--------- | ------- | -----
  ✅ |  🚫  |  ✅ |  🚫  | ✅ 
 
+ ## Opzet
+
+ De simpelste vorm is slechts een input, dit werkt overal.
+
  ## Fallback
 
 Hier kijk ik of de browser de FileReader API ondersteund, mocht ie dat doen dan enhance ik de input.
@@ -75,6 +79,8 @@ Hier kijk ik of de browser de FileReader API ondersteund, mocht ie dat doen dan 
  ```js
  if (window.FileReader)
  ```
+
+ Uiteindelijk is de hoofd enhancement dat de geupload image even gepreviewed wordt in het scherm.
 
  ## Device lab
 
