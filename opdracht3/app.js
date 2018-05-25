@@ -32,7 +32,9 @@ for (var i = 0; i < 100; i++) {
 		return {
 			firstLetter: d.name.charAt(0),
 			fullName: d.name,
-			nickName: d.username
+			nickName: d.username,
+			phone: d.phone,
+			email: d.email
 		}
 	})
 	filteredUsers.sort(compare);
