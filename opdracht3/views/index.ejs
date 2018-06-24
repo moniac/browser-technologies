@@ -18,13 +18,19 @@
 			position: fixed;
 		}
 
+		main {
+			max-width: 500px;
+		}
+
 		#up {
 			bottom: 0;
 			left: 0;
+			border-radius: 8px;
 		}
 
 		.header {
-			background: url('./images/cool-background.png');
+			/* background: url('./images/cool-background.png'); */
+			background: #314CB6;
 			color: white;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -41,13 +47,50 @@
 			margin: 0 auto;
 		}
 
+		.nav {
+			position: fixed;
+			right: 5%;
+			display: flex;
+			list-style: none;
+			font-size: 1.2rem;
+			height: 100%;
+		}
+
+		.nav a {
+			color: #333;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		.nav li {
+			margin: 0.5rem 0;
+			transition: all 0.2s ease;
+			text-align: center;
+		}
+
+		.nav li:hover,
+		.nav li:focus,
+		.nav li:focus-within {
+			transform: scale(2);
+			border: 1px dashed black;
+			outline: 0;
+			outline: none;
+		}
+
+		.nav a {
+			text-decoration: none;
+			outline: 0;
+		}
+
 		form {
 			position: sticky;
 			top: 0;
 			background: white;
 			padding: 2rem;
 			text-align: center;
-			background: #BF4C9F;
+			background: #00487C;
 			color: white;
 		}
 
@@ -102,8 +145,92 @@
 		</label>
 		<input type="submit" value='Search'>
 	</form> 
-<main id='main'>
 
+	<div class="nav">
+      <ol>
+        <li>
+          <a href="#A" class="shortcut">A</a>
+        </li>
+        <li>
+          <a href="#B" class="shortcut">B</a>
+        </li>
+        <li>
+          <a href="#C" class="shortcut">C</a>
+        </li>
+        <li>
+          <a href="#D" class="shortcut">D</a>
+        </li>
+        <li>
+          <a href="#E" class="shortcut">E</a>
+        </li>
+        <li>
+          <a href="#F" class="shortcut">F</a>
+        </li>
+        <li>
+          <a href="#G" class="shortcut">G</a>
+        </li>
+        <li>
+          <a href="#H" class="shortcut">H</a>
+        </li>
+        <li>
+          <a href="#I" class="shortcut">I</a>
+        </li>
+        <li>
+          <a href="#J" class="shortcut">J</a>
+        </li>
+        <li>
+          <a href="#K" class="shortcut">K</a>
+        </li>
+        <li>
+          <a href="#L" class="shortcut">L</a>
+        </li>
+        <li>
+          <a href="#M" class="shortcut">M</a>
+        </li>
+        <li>
+          <a href="#N" class="shortcut">N</a>
+        </li>
+        <li>
+          <a href="#O" class="shortcut">O</a>
+        </li>
+        <li>
+          <a href="#P" class="shortcut">P</a>
+        </li>
+        <li>
+          <a href="#Q" class="shortcut">Q</a>
+        </li>
+        <li>
+          <a href="#R" class="shortcut">R</a>
+        </li>
+        <li>
+          <a href="#S" class="shortcut">S</a>
+        </li>
+        <li>
+          <a href="#T" class="shortcut">T</a>
+        </li>
+        <li>
+          <a href="#U" class="shortcut">U</a>
+        </li>
+        <li>
+          <a href="#V" class="shortcut">V</a>
+        </li>
+        <li>
+          <a href="#W" class="shortcut">W</a>
+        </li>
+        <li>
+          <a href="#X" class="shortcut">X</a>
+        </li>
+        <li>
+          <a href="#Y" class="shortcut">Y</a>
+        </li>
+        <li>
+          <a href="#Z" class="shortcut">Z</a>
+        </li>
+      </ol>
+    </div>
+
+
+<main id='main'>
 	
 	<div>
 		<ul>
@@ -111,7 +238,7 @@
 				<li> 
 				<details>
 					<summary>
-						<h4><%=user.nickName%></h4>
+						<h4><%=user.fullName%></h4>
 						<p><%=user.phone%></p>
 					</summary>
 					<h4><%=user.email%></h4>
@@ -119,6 +246,14 @@
 				</li>
 			<% }) %>
 		</ul>
+	</div>
+
+	<div>
+		<ol>
+			<li id='A'>
+
+			</li>
+		</ol>
 	</div>
 </main>
 
