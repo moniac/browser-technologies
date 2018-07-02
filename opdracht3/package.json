@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.3",
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "nodemon": "^1.17.5"
   }
 }

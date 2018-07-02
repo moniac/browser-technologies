@@ -23,10 +23,8 @@ function compare(a, b) {
 	return 0;
 }
 
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 150; i++) {
 	var fakeUser = faker.helpers.createCard();
-	console.log(fakeUser)
-	// push all data to allUser
 	Users.push(fakeUser);
 	filteredUsers = Users.map(function (d) {
 		return {
@@ -39,9 +37,6 @@ for (var i = 0; i < 100; i++) {
 	})
 	filteredUsers.sort(compare);
 };
-
-console.log(filteredUsers)
-
 
 
 
@@ -74,6 +69,22 @@ app.get('/contact/:id', (req, res) => {
 	res.render('detail', {
 		detailedUser
 	})
+})
+
+app.get('/api/contact/:id', (req, res) => {
+	console.log(req.params.id)
+	let detailedUser
+	const {
+		id
+	} = req.params
+	filteredUsers.forEach((user) => {
+		if (user.nickName === id) {
+			detailedUser = user
+		}
+		return
+	})
+	console.log(detailedUser)
+	res.json(detailedUser)
 })
 
 app.listen(port, () => {

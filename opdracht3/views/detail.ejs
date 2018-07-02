@@ -1,3 +1,70 @@
-<h2>
-	Your contact <%- detailedUser.fullName %>
-</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<style>
+		* {
+			scroll-behavior: smooth;
+			box-sizing: border-box
+		}
+
+		html,
+		body {
+			font-family: 'Open Sans', Arial, Helvetica, sans-serif
+		}
+
+		body {
+			margin: 0;
+			padding: 0
+		}
+
+		.header {
+			background: #314CB6;
+			color: white;
+			background-repeat: no-repeat;
+			background-size: cover
+		}
+
+		.header h1 {
+			padding: 2rem 1rem;
+			text-align: center;
+			margin: 0
+		}
+
+		.contact {
+			text-align: center
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="header" id='header'>
+		<h1>Je contacten lijstje</h1>
+	</div>
+
+	<section class="contact">
+		<h1>
+			Je contact
+			<%- detailedUser.fullName %>
+		</h1>
+		<p>Telefoon:
+			<%- detailedUser.phone %>
+		</p>
+		<p>Email:
+			<%- detailedUser.email %>
+		</p>
+		<p>Nickname:
+			<%- detailedUser.nickName %>
+		</p>
+	</section>
+</body>
+
+</html>

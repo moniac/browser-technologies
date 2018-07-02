@@ -1,282 +1,808 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Contacten Lijst</title>
-	<style>
-		* {
-			scroll-behavior: smooth;
-			box-sizing: border-box;
-		}
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		.fixed {
-			position: fixed;
-		}
+<html lang="en" class="no-js">
 
-		main {
-			max-width: 500px;
-		}
 
-		#up {
-			bottom: 0;
-			left: 0;
-			border-radius: 8px;
-		}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Contacten Lijst</title>
+<script>
+	document.documentElement.className = ''
+</script>
+<style>
+	* {
+		scroll-behavior: smooth;
+		box-sizing: border-box;
+	}
 
-		.header {
-			/* background: url('./images/cool-background.png'); */
-			background: #314CB6;
-			color: white;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
+	html,
+	body {
+		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	}
 
-		.header h1 {
-			padding: 2rem 1rem;
-			text-align: center;
-			margin: 0;
-		}
+	body {
+		margin: 0;
+		padding: 0;
+	}
 
-		#main {
-			width: 90%;
-			margin: 0 auto;
-		}
+	.fixed {
+		position: fixed;
+	}
+
+	main {
+		max-width: 500px;
+		max-width: 31rem;
+		padding-top: 32px;
+		padding-top: 2rem;
+	}
+
+	input[type=submit] {
+		display: none;
+	}
+
+	.no-js input[type=submit] {
+		display: inline-block;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	main>ol>li>a {
+		font-size: 22px;
+		font-size: 1.4rem;
+		padding: 8px;
+		padding: 0.5rem;
+		border-radius: 4px;
+		color: white;
+		background: #314CB6;
+		z-index: 1;
+		display: block;
+		top: 54px;
+		top: 3.375rem;
+	}
+
+	main ol ol {
+		padding-top: 1rem;
+	}
+
+	main>ol>li {
+		margin-bottom: 2rem;
+	}
+
+	main>ol>li ol a {
+		display: block;
+		padding: 8px;
+		padding: 0.5rem;
+		color: black;
+		border-bottom: 1px solid black;
+	}
+
+	.hideAll>ol li ol li {
+		display: none;
+	}
+
+	.hideAll>ol>li {
+		display: none;
+	}
+
+	.showLabel.showLabel {
+		display: block;
+	}
+
+	.showMe.showMe {
+		display: block;
+	}
+
+	.extradetails {
+		padding: 8px;
+		padding: 0.5rem;
+	}
+
+	.header {
+		/* background: url('./images/cool-background.png'); */
+		background: #314CB6;
+		color: white;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.header h1 {
+		padding: 32px 16px;
+		padding: 2rem 1rem;
+		text-align: center;
+		margin: 0;
+	}
+
+	#main {
+		width: 80%;
+		margin: 0 auto;
+		/* margin-left: 10rem; */
+	}
+
+	.nav {
+		position: fixed;
+		left: 1%;
+		top: 150px;
+		display: flex;
+		list-style: none;
+		font-size: 1.1rem;
+		height: 100%;
+		display: none;
+	}
+
+	.nav a {
+		color: #333;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	ol {
+		padding: 0rem;
+	}
+
+	.nav li {
+		margin: 8px 0;
+		margin: 0.5rem 0;
+		transition: all 0.2s ease;
+		text-align: center;
+	}
+
+	.nav li:hover,
+	.nav li:focus,
+	.nav li:focus-within {
+		transform: scale(2);
+		border: 1px dashed black;
+		outline: 0;
+		outline: none;
+	}
+
+	.nav a {
+		text-decoration: none;
+		outline: 0;
+	}
+
+	form {
+		position: sticky;
+		top: 0;
+		background: white;
+		padding: 1rem;
+		text-align: center;
+		background: #00487C;
+		color: white;
+		z-index: 2;
+	}
+
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li details {
+		background: gray;
+		width: 100%;
+		border-radius: 8px;
+		margin: 16px 0;
+		margin: 1rem 0;
+	}
+
+	li details summary {
+		padding: 16px;
+		padding: 1rem;
+		display: inline-block;
+		width: 100%;
+		cursor: pointer;
+		outline: 0;
+	}
+
+	li details summary:focus {
+		border: 1px solid black;
+		border-radius: 8px;
+	}
+
+	li details summary h4 {
+		display: inline-block;
+	}
+
+	#up {
+		background: #BF4C9F;
+		padding: 16px;
+		padding: 1rem;
+		color: white;
+		text-decoration: none;
+		bottom: 16px;
+		bottom: 1rem;
+		right: 0;
+		border-radius: 8px;
+		float: right;
+	}
+
+	@media (min-width: 40rem) {
 
 		.nav {
-			position: fixed;
-			right: 5%;
-			display: flex;
-			list-style: none;
-			font-size: 1.2rem;
-			height: 100%;
+			display: block;
 		}
 
-		.nav a {
-			color: #333;
-		}
-
-		li {
-			list-style: none;
-		}
-
-		.nav li {
-			margin: 0.5rem 0;
-			transition: all 0.2s ease;
-			text-align: center;
-		}
-
-		.nav li:hover,
-		.nav li:focus,
-		.nav li:focus-within {
-			transform: scale(2);
-			border: 1px dashed black;
-			outline: 0;
-			outline: none;
-		}
-
-		.nav a {
-			text-decoration: none;
-			outline: 0;
-		}
-
-		form {
+		main>ol>li>a {
+			font-size: 22px;
+			font-size: 1.4rem;
+			padding: 8px;
+			padding: 0.5rem;
+			border-radius: 4px;
+			color: white;
+			background: #314CB6;
+			z-index: 1;
+			display: block;
 			position: sticky;
-			top: 0;
-			background: white;
-			padding: 2rem;
-			text-align: center;
-			background: #00487C;
-			color: white;
+			top: 54px;
+			top: 3.375rem;
 		}
 
-
-		ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-
-		li details {
-			background: gray;
-			width: 100%;
-			border-radius: 8px;
-			margin: 1rem 0;
-		}
-
-		li details summary {
-			padding: 1rem;
-			display: inline-block;
-			width: 100%;
-			cursor: pointer;
-			outline: 0;
-		}
-
-		li details summary:focus {
-			border: 1px solid black;
-			border-radius: 8px;
-		}
-
-		li details summary h4 {
-			display: inline-block;
-		}
-
-		#up {
-			background: #BF4C9F;
-			padding: 1rem;
-			color: white;
-			text-decoration: none;
-		}
-
-	</style>
+	}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="header" id='header'>
-	<h1>Je contacten lijstje</h1>
-</div>
+	<div class="header" id='header'>
+		<h1>Je contacten lijstje</h1>
+	</div>
 	<form action="/" method='GET'>
-		<label> Search
-		<input type="text" name='namesearch'>
+		<label> Zoeken
+			<input class="contactSearch" type="text" name='namesearch'>
 		</label>
 		<input type="submit" value='Search'>
-	</form> 
+	</form>
 
 	<div class="nav">
-      <ol>
-        <li>
-          <a href="#A" class="shortcut">A</a>
-        </li>
-        <li>
-          <a href="#B" class="shortcut">B</a>
-        </li>
-        <li>
-          <a href="#C" class="shortcut">C</a>
-        </li>
-        <li>
-          <a href="#D" class="shortcut">D</a>
-        </li>
-        <li>
-          <a href="#E" class="shortcut">E</a>
-        </li>
-        <li>
-          <a href="#F" class="shortcut">F</a>
-        </li>
-        <li>
-          <a href="#G" class="shortcut">G</a>
-        </li>
-        <li>
-          <a href="#H" class="shortcut">H</a>
-        </li>
-        <li>
-          <a href="#I" class="shortcut">I</a>
-        </li>
-        <li>
-          <a href="#J" class="shortcut">J</a>
-        </li>
-        <li>
-          <a href="#K" class="shortcut">K</a>
-        </li>
-        <li>
-          <a href="#L" class="shortcut">L</a>
-        </li>
-        <li>
-          <a href="#M" class="shortcut">M</a>
-        </li>
-        <li>
-          <a href="#N" class="shortcut">N</a>
-        </li>
-        <li>
-          <a href="#O" class="shortcut">O</a>
-        </li>
-        <li>
-          <a href="#P" class="shortcut">P</a>
-        </li>
-        <li>
-          <a href="#Q" class="shortcut">Q</a>
-        </li>
-        <li>
-          <a href="#R" class="shortcut">R</a>
-        </li>
-        <li>
-          <a href="#S" class="shortcut">S</a>
-        </li>
-        <li>
-          <a href="#T" class="shortcut">T</a>
-        </li>
-        <li>
-          <a href="#U" class="shortcut">U</a>
-        </li>
-        <li>
-          <a href="#V" class="shortcut">V</a>
-        </li>
-        <li>
-          <a href="#W" class="shortcut">W</a>
-        </li>
-        <li>
-          <a href="#X" class="shortcut">X</a>
-        </li>
-        <li>
-          <a href="#Y" class="shortcut">Y</a>
-        </li>
-        <li>
-          <a href="#Z" class="shortcut">Z</a>
-        </li>
-      </ol>
-    </div>
-
-
-<main id='main'>
-	
-	<div>
-		<ul>
-			<% people.forEach((user) => { %>
-				<li> 
-				<details>
-					<summary>
-						<h4><%=user.fullName%></h4>
-						<p><%=user.phone%></p>
-					</summary>
-					<h4><%=user.email%></h4>
-				</details>
-				</li>
-			<% }) %>
-		</ul>
-	</div>
-
-	<div>
 		<ol>
-			<li id='A'>
-
+			<li>
+				<a href="#A">A</a>
+			</li>
+			<li>
+				<a href="#B">B</a>
+			</li>
+			<li>
+				<a href="#C">C</a>
+			</li>
+			<li>
+				<a href="#D">D</a>
+			</li>
+			<li>
+				<a href="#E">E</a>
+			</li>
+			<li>
+				<a href="#F">F</a>
+			</li>
+			<li>
+				<a href="#G">G</a>
+			</li>
+			<li>
+				<a href="#H">H</a>
+			</li>
+			<li>
+				<a href="#I">I</a>
+			</li>
+			<li>
+				<a href="#J">J</a>
+			</li>
+			<li>
+				<a href="#K">K</a>
+			</li>
+			<li>
+				<a href="#L">L</a>
+			</li>
+			<li>
+				<a href="#M">M</a>
+			</li>
+			<li>
+				<a href="#N">N</a>
+			</li>
+			<li>
+				<a href="#O">O</a>
+			</li>
+			<li>
+				<a href="#P">P</a>
+			</li>
+			<li>
+				<a href="#Q">Q</a>
+			</li>
+			<li>
+				<a href="#R">R</a>
+			</li>
+			<li>
+				<a href="#S">S</a>
+			</li>
+			<li>
+				<a href="#T">T</a>
+			</li>
+			<li>
+				<a href="#U">U</a>
+			</li>
+			<li>
+				<a href="#V">V</a>
+			</li>
+			<li>
+				<a href="#W">W</a>
+			</li>
+			<li>
+				<a href="#X">X</a>
+			</li>
+			<li>
+				<a href="#Y">Y</a>
+			</li>
+			<li>
+				<a href="#Z">Z</a>
 			</li>
 		</ol>
 	</div>
-</main>
 
-<a href="#header" id="up">Terug omhoog</a>
 
-<script>
-	var backUp = document.getElementById('up')
+	<main id='main'>
+		<p>You have a
+			<%= people.length %> people in your contact list.</p>
 
-	    if (typeof document.addEventListener === 'function') { //addEventListener supported from IE9
-      window.addEventListener('scroll', function () {
-        if (document.documentElement.scrollTop > 200 || window.scrollY > 200) {
-          backUp.className = 'fixed'
-        } else {
-          backUp.className = ''
-        }
-      })
-    } else if(typeof window.attachEvent === 'function'){
-      window.attachEvent('onscroll', function () { //attachEvent supported <= IE8
-        if (document.documentElement.scrollTop > 200) {
-          backUp.className = 'fixed'
-        } else {
-          backUp.className = ''
-        }
-      })
-    }
-</script>
+		<% if (!locals.people.length) { %>
+			<p>No matches found, maybe a typo?</p>
+			<%} %>
+				<ol>
+					<li id='A'>
+						<a href="#A">A</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'A') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='B'>
+						<a href="#B">B</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'B') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='C'>
+						<a href="#C">C</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'C') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='D'>
+						<a href="#D">D</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'D') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='E'>
+						<a href="#E">E</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'E') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='F'>
+						<a href="#F">F</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'F') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='G'>
+						<a href="#G">G</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'G') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='H'>
+						<a href="#H">H</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'H') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='I'>
+						<a href="#I">I</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'I') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='J'>
+						<a href="#J">J</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'J') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='K'>
+						<a href="#K">K</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'K') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='L'>
+						<a href="#L">L</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'L') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='M'>
+						<a href="#M">M</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'M') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='N'>
+						<a href="#N">N</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'N') { %>
+									<li class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='O'>
+						<a href="#O">O</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'O') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='P'>
+						<a href="#P">P</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'P') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='Q'>
+						<a href="#Q">Q</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'Q') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='R'>
+						<a href="#R">R</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'R') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='S'>
+						<a href="#S">S</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'S') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='T'>
+						<a href="#T">T</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'T') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='U'>
+						<a href="#U">U</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'U') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='V'>
+						<a href="#V">V</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'V') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='W'>
+						<a href="#W">W</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'W') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='X'>
+						<a href="#X">X</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'X') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='Y'>
+						<a href="#Y">Y</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'Y') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+					<li id='Z'>
+						<a href="#Z">Z</a>
+						<ol>
+							<% people.forEach((user) => { %>
+								<% if(user.firstLetter == 'Z') { %>
+									<li data-name='<%= user.fullName.toLowerCase() %>' class="contact">
+										<a href="/contact/<%= user.nickName %>">
+											<%= user.fullName %>
+										</a>
+									</li>
+									<% } %>
+										<% }) %>
+						</ol>
+					</li>
+				</ol>
+
+	</main>
+
+	<a href="#header" id="up">Terug omhoog</a>
+
+	<script>
+		if ('querySelector' in document && 'addEventListener' in window) {
+			var backUp = document.getElementById('up')
+			var input = document.querySelector('form > label input[type=text]')
+			var allContacts = document.querySelectorAll('[data-name]')
+			var allFooters = document.querySelectorAll('.extradetails')
+			var footer = document.createElement('footer')
+			var p = document.createElement('p')
+			var pPhone = document.createElement('p')
+
+			input.addEventListener('keyup', function (event) {
+
+				var main = document.querySelector('main')
+
+
+				if (event.target.value.length > 0) {
+					main.className = 'hideAll'
+					var contacts = document.querySelectorAll('[data-name*=' + event.target.value.toLowerCase() + ']')
+
+				} else {
+
+					main.className = ''
+
+				}
+
+				for (var i = 0; i < allContacts.length; i++) {
+					allContacts[i].className = ''
+					allContacts[i].parentNode.parentNode.className = ''
+
+				}
+
+				if (contacts) {
+					for (var i = 0; i < contacts.length; i++) {
+						contacts[i].className = 'showMe'
+						contacts[i].parentNode.parentNode.className = 'showLabel'
+					}
+				}
+
+
+
+			})
+
+			function loadDoc(event) {
+				var xhttp = new XMLHttpRequest()
+				xhttp.onreadystatechange = function (event) {
+					if (this.readyState == 4 && this.status == 200) {
+
+						var details = JSON.parse(this.responseText)
+						var contact = document.querySelector('[data-name*="adele crona"]')
+						var contactA = document.querySelector('[data-name*="' + details.fullName.toLowerCase() + '"]')
+						pPhone.innerHTML = details.phone
+						p.innerHTML = details.email
+						footer.className = 'extradetails'
+						footer.innerHTML = ''
+						contactA.appendChild(footer)
+						footer.appendChild(p)
+						footer.appendChild(pPhone)
+					}
+				};
+				xhttp.open("GET", "/api" + event.target.pathname, true)
+				xhttp.send()
+				event.preventDefault()
+			}
+
+			for (var index = 0; index < allContacts.length; index++) {
+				allContacts[index].addEventListener('click', loadDoc)
+
+			}
+
+			window.addEventListener('scroll', function () {
+				if (document.documentElement.scrollTop > 200 || window.scrollY > 200) {
+					backUp.className = 'fixed'
+				} else {
+					backUp.className = ''
+				}
+			})
+		}
+	</script>
+</body>
+
+</html>
